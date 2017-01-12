@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load thumbnail %}
+
+{% load mptt_tags %}
+
+{% block title %}{{ block.super }}商品列表{% endblock %}
+
+
+{% block container %}
+
+
+<div class="container">
+<hr>
+
+        <ul class="nav nav-pills" role="tablist">
+    {% recursetree nodes %}
+        {% if node.is_leaf_node %}
+        <li>
+            <a tabindex="-1" href="{{ node.get_absolute_url }}">{{ node.name }}</a>
+        </li>
+        {% elif node.level == 1 %}
+        <li class="dropdown-submenu">
+            <a href="#">{{ node.name }}</a>
+            <ul class="dropdown-menu" role="menu">
+                {{ children }}
+            </ul>
+        </li>
+        {% else %}
+        <li role="presentation" class="active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ node.name }}</a>
+            <ul class="dropdown-menu" role="menu">
+            {{ children }}
+            </ul>
+        </li>
+        {% endif %}
+    {% endrecursetree %}
+
+    </ul>
+
+</div>
+
+
+<div class="container">
+<hr>
+      <div class="product-list">
+        <h3 align="center">{% if category %}{{ category.name }}{% else %}全部商品{% endif %}</h3>
+        <ul>
+            {% for product in products %}
+            <div class="item">
+                <a href="{{ product.get_absolute_url }}">
+                    <img src="{{ product.image_front.url }}">
+                </a>
+                <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                ￥{{ product.price }}
+
+            </div>
+            {% endfor %}
+
+        </ul>
+      </div>
+
+</div><!-- /.container -->
+
+{% endblock container %}
