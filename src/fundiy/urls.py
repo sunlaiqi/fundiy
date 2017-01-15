@@ -6,6 +6,7 @@ import profiles.urls
 import accounts.urls
 from . import views
 # to make home point to product_list
+from orders.views import order_create
 from shop.views import product_list
 
 urlpatterns = [
@@ -13,10 +14,13 @@ urlpatterns = [
     url(r'^$', product_list, name='home'),
     # make sure include cart.urls before shop.urls
     url(r'^cart/', include('cart.urls', namespace='cart')),
+    # make sure inlcude orders.urls before shop.urls
+    url(r'^order/', include('orders.urls', namespace='orders')),
     url(r'^shop/', include('shop.urls', namespace='shop')),
     url(r'^about/$', views.AboutPage.as_view(), name='about'),
     url(r'^users/', include(profiles.urls, namespace='profiles')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^chaining/', include('smart_selects.urls')),
     url(r'^', include(accounts.urls, namespace='accounts')),
 
 ]

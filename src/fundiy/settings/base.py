@@ -83,6 +83,8 @@ INSTALLED_APPS = (
     'accounts',
     'shop',
     'cart',
+    'orders',
+    'smart_selects',
 
 )
 
@@ -163,3 +165,4 @@ THUMBNAIL_EXTENSION = 'png'     # Or any extn for your thumbnails
 # Following are added by Michael
 # for cart session
 CART_SESSION_ID = 'cart'
+
