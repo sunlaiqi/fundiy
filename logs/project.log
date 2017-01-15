@@ -1,0 +1,9 @@
+[19/Dec/2016 20:56:36] INFO [D:\Websites\DjangoExample\djangoedge\src\profiles\signals.py:17] New user profile for admin <laiqi.sun@gmail.com> created
+[20/Dec/2016 09:28:57] INFO [D:\Websites\DjangoExample\djangoedge\src\profiles\signals.py:17] New user profile for test <test@example.com> created
+[21/Dec/2016 23:01:29] INFO [D:\Websites\DjangoExample\djangoedge\src\profiles\signals.py:17] New user profile for test1 <test1@example.com> created
+[21/Dec/2016 23:14:56] INFO [D:\Websites\DjangoExample\djangoedge\src\profiles\signals.py:17] New user profile for michael sun <laiqi.sun@gmail.com> created
+[31/Dec/2016 12:52:42] INFO [D:\Websites\DjangoExample\djangoedge\src\profiles\signals.py:17] New user profile for michael sun <laiqi.sun@gmail.com> created
+[02/Jan/2017 19:32:53] INFO [D:\Websites\DjangoExample\djangoedge\src\profiles\signals.py:17] New user profile for test1 <test1@example.com> created
+[02/Jan/2017 21:25:41] INFO [D:\Websites\DjangoExample\djangoedge\src\profiles\signals.py:17] New user profile for maker1 <maker1@example.com> created
+[02/Jan/2017 21:45:21] INFO [D:\Websites\DjangoExample\djangoedge\src\profiles\signals.py:17] New user profile for designer1 <designer1@example.com> created
+[09/Jan/2017 13:53:29] INFO [D:\Websites\DjangoExample\djangoedge\src\profiles\signals.py:17] New user profile for test2 <test2@example.com> created

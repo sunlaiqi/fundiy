@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load thumbnail %}
+
+{% load mptt_tags %}
+
+
+{% block title %}{{ block.super }}非常感谢!{% endblock %}
+
+
+
+{% block container %}
+
+<div class="container">
+<hr><hr>
+
+    <h1>感谢您购物!</h1><p>您的订单已经成功提交!您的订单号是<strong>{{ order.id }}</strong></p>
+
+
+</div><!-- /.container -->
+{% endblock container %}
