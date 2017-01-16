@@ -8,4 +8,4 @@ easy-thumbnails>=2.3
 psycopg2
 dj-database-url
 django-mptt
-
+django-smart-selects
